@@ -1,0 +1,6 @@
+{
+  "name": "KasFlow",
+  "description": "Aplikasi pencatatan dan peninjauan pemasukan serta pengeluaran keuangan pribadi dengan sinkronisasi cloud dan grafik visualisasi bulanan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

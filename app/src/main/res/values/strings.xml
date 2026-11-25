@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">KasFlow</string>
+    <string name="app_tagline">Peninjauan Pemasukan &amp; Pengeluaran Cloud</string>
+    <string name="sign_in_google">Masuk dengan Google</string>
+    <string name="sign_out">Keluar Akun</string>
+    <string name="cloud_synced">Tersinkronisasi Cloud</string>
+    <string name="nav_overview">Ringkasan</string>
+    <string name="nav_analytics">Grafik</string>
+    <string name="nav_transactions">Transaksi</string>
+    <string name="add_transaction">Catat Transaksi</string>
+    <string name="edit_transaction">Edit Transaksi</string>
+    <string name="delete_transaction">Hapus Transaksi</string>
+</resources>

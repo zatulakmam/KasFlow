@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Personal income or expense financial entry synced per user in Cloud Firestore.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Authenticated Firebase user UID owning this transaction."
+        },
+        "amount": {
+          "type": "integer",
+          "description": "Transaction amount in Indonesian Rupiah (positive integer > 0)."
+        },
+        "type": {
+          "type": "string",
+          "enum": ["INCOME", "EXPENSE"],
+          "description": "Cashflow direction: INCOME or EXPENSE."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category identifier (1-50 chars)."
+        },
+        "date": {
+          "type": "integer",
+          "description": "Transaction date as UTC epoch milliseconds."
+        },
+        "title": {
+          "type": "string",
+          "description": "Short title or merchant/source description (1-100 chars)."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional note or memo (0-250 chars)."
+        },
+        "yearMonth": {
+          "type": "string",
+          "description": "Month key in YYYY-MM format for monthly review and aggregation."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Immutable server creation timestamp (FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last server update timestamp (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "amount",
+        "type",
+        "category",
+        "date",
+        "title",
+        "yearMonth",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/transactions/{transactionId}": {
+      "schema": {
+        "$ref": "#/entities/Transaction"
+      },
+      "description": "User-scoped income and expense transaction records."
+    }
+  }
+}
